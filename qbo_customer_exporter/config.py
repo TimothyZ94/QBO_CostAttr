@@ -16,8 +16,8 @@ Client ID and Client Secret are intentionally NOT stored here.
 They are requested by popup every time the program runs.
 """
 
-ENVIRONMENT = "sandbox"  # "sandbox" or "production"
-REDIRECT_URI = "http://localhost:8000/callback"
+ENVIRONMENT = "production"  # "sandbox" or "production"
+REDIRECT_URI = "https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl"
 
 # QBO query paging. Intuit allows up to 1000 entities per query response.
 PAGE_SIZE = 1000
