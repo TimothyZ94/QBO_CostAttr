@@ -16,6 +16,7 @@ from credentials_ui import (
 from oauth_flow import authorize
 from qbo_client import QBOClient
 from exporter import export_customers_csv
+from bill_customer_mapper import run_bill_customer_mapping
 
 
 def main():
@@ -59,10 +60,15 @@ def main():
         f"Saved to:\n{saved_path}"
     )
 
+    input("getCustomerList() completed. Press Enter to continue...")
+
+    run_bill_customer_mapping(qbo)
+
 
 if __name__ == "__main__":
     try:
         main()
+        
     except SystemExit:
         raise
     except Exception as exc:
